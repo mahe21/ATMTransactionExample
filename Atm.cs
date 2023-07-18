@@ -40,13 +40,13 @@ namespace AtmTransaction
             
         }
 
-        public void Deposit(int amount)
+        public void Deposit(int amountDeposited)
         {
             if (amount % 100 == 0)
             {
                 if (amount <= accountBalance)
                 {
-                    accountBalance += amount;
+                    accountBalance += amountDeposited;
                     Console.WriteLine("Withdrawal successful, Remaining balance is: " + accountBalance + "Rs");
                 }
                 else
